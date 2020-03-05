@@ -255,6 +255,14 @@ class CiphertextMessage(Message):
                 best = l
         return (best[0], best[2])
 
+    
+#Decrypt Story
+def decrypt_story():
+    story = get_story_string()
+    story2 = CiphertextMessage(story)
+    return story2.decrypt_message()
+
+
 #Example test case (PlaintextMessage)
 plaintext = PlaintextMessage('hello', 2)
 print('Expected Output: jgnnq')
